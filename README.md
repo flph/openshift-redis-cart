@@ -1,6 +1,6 @@
 OpenShift Redis Cartridge
 =========================
-Redis - 3.0.6
+Redis - 3.0.7
 -------------
 
 Runs [Redis](http://redis.io) on [OpenShift](https://openshift.redhat.com/app/login) using downloadable cartridge support.  To install to OpenShift from the CLI (you'll need version 1.9 or later of rhc), create your app and then run:
@@ -24,7 +24,7 @@ To access `redis-cli` from the SSH session, use the $REDIS_CLI environment varia
     $ ssh <gear with redis>
     Connectiing to....
     $ redis-cli $REDIS_CLI
-    127.0.32.124 6379> 
+    127.0.32.124 6379>
 
 To connect to Redis from your local shell, run the <code>cartridge-status</code> command to get the port and authorization info:
 
@@ -70,7 +70,7 @@ Always restart each gear after setting these environment variables.
 Upgrading
 ---------
 
-If you install this cartridge from source, you will be using a precompiled version of Redis 2.6 for RHEL6.  You can run the <code>bin/control update</code> script on each gear to build and update to the latest version of the Redis 2.6 tree.  
+If you install this cartridge from source, you will be using a precompiled version of Redis 3.0.7 for RHEL6.  You can run the <code>bin/control update</code> script on each gear to build and update to the latest version of the Redis 3.0.7 tree.
 
     $ rhc ssh <yourapp> --gears 'cd redis && ./bin/control update'
     $ rhc restart-cartridge redis -a <yourapp>'
